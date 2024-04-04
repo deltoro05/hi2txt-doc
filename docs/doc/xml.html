@@ -134,7 +134,7 @@ href="#tag_field_display">display</a><br>
 <span style="color: #3333ff;">output</span> &gt; <a
 href="#tag_table">table</a>* @<a href="#tag_table_id">id</a> @<a
 href="#tag_table_lineignore">line-ignore</a> @<a
-href="#tag_table_lineignoreoperator">line-ignore-operator</a> @<a
+href="#tag_table_lineignoreoperator">line-ignore-operator</a>Â @<a
 href="#tag_table_sort">sort</a> @<a href="#tag_table_sortorder">sort-order</a>
 @<a href="#tag_table_sortformat">sort-format</a> @<a
 href="#tag_table_linesmax">lines-max</a> @<a
@@ -203,16 +203,16 @@ style="color:#008000">structure@file</span>], and the different elements. </p>
 
 <div class="xml_tags">
 &lt;hi2txt&gt;<span style="color:#008000"><br>
-  &lt;structure&gt;</span><span style="color:#ff8000"><br>
-    &lt;check&gt;&lt;definition&gt;&lt;/definition&gt;&lt;size&gt;&lt;/size&gt;&lt;/check&gt;</span><br>
-    <span style="color: #009900;">&lt;elt/&gt;...<br>
-    &lt;loop&gt;&lt;elt/&gt;...&lt;/loop&gt;</span><span
+Â Â &lt;structure&gt;</span><span style="color:#ff8000"><br>
+Â Â Â Â &lt;check&gt;&lt;definition&gt;&lt;/definition&gt;&lt;size&gt;&lt;/size&gt;&lt;/check&gt;</span><br>
+Â Â Â Â <span style="color: #009900;">&lt;elt/&gt;...<br>
+Â Â Â Â &lt;loop&gt;&lt;elt/&gt;...&lt;/loop&gt;</span><span
 style="color:#008000"><br>
-  &lt;/structure&gt;</span><span style="color:#0000ff"><br>
-  &lt;output&gt;<br>
-   &lt;table&gt;&lt;column/&gt;...&lt;/table&gt;<br>
-   &lt;field/&gt;...<br>
-  &lt;/output&gt;</span><br>
+Â Â &lt;/structure&gt;</span><span style="color:#0000ff"><br>
+Â Â &lt;output&gt;<br>
+Â Â Â &lt;table&gt;&lt;column/&gt;...&lt;/table&gt;<br>
+Â Â Â &lt;field/&gt;...<br>
+Â Â &lt;/output&gt;</span><br>
 &lt;/hi2txt&gt;</div>
 
 <p></p>
@@ -318,12 +318,12 @@ optional location specifying the expected location to match this structure</div>
 <div class="parameter_example">
 ex: ddonpach.xml<br>
 &lt;structure&gt;...<br>
-  &lt;check&gt;...<br>
-    <span class="xml_focus">&lt;definition&gt;</span><span
+Â  &lt;check&gt;...<br>
+Â Â Â  <span class="xml_focus">&lt;definition&gt;</span><span
 class="xml_focus">0:1016ea:64:00:05<br>
-                0:101626:4:00:06&lt;/definition</span><span
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  0:101626:4:00:06&lt;/definition</span><span
 class="xml_focus">&gt;</span><br>
-  &lt;/check&gt;<br>
+Â  &lt;/check&gt;<br>
 &lt;/structure&gt; </div>
 </div>
 
@@ -338,9 +338,9 @@ optional integer specifying the expected input size to match this structure<br>
 <div class="parameter_example">
 ex: ddonpach.xml<br>
 &lt;structure&gt;...<br>
-  &lt;check&gt;...<br>
-<span class="xml_focus">    &lt;size&gt;104&lt;/size&gt;<br>
-</span>  &lt;/check&gt;<br>
+Â  &lt;check&gt;...<br>
+<span class="xml_focus">Â Â Â  &lt;size&gt;104&lt;/size&gt;<br>
+</span>Â  &lt;/check&gt;<br>
 &lt;/structure&gt;</div>
 </div>
 
@@ -418,9 +418,9 @@ bytes-related and text-related decoding operations.</div>
 <div class="parameter_example">
 ex: ddonpach.xml<br>
 &lt;structure&gt;...<br>
-  &lt;elt size="4" <span class="parameter_example_focus">type="int"</span>
+Â  &lt;elt size="4" <span class="parameter_example_focus">type="int"</span>
 id="TOP SCORE" base="16"/&gt;<br>
-  &lt;elt size="6" <span class="parameter_example_focus">type="text"</span>
+Â  &lt;elt size="6" <span class="parameter_example_focus">type="text"</span>
 id="NAME" byte-skip="odd" ascii-step="4" ascii-offset="32"
 charset="ddonpach"/&gt;<br>
 &lt;/structure&gt; </div>
@@ -451,9 +451,9 @@ see <a href="#tag_column_format">column format</a> for more information<br>
 <div class="parameter_example">
 ex: gng.xml<br>
 &lt;structure&gt;<br>
-  &lt;elt size="2" type="int" id="RANKPOINTER" <span
+Â  &lt;elt size="2" type="int" id="RANKPOINTER" <span
 class="parameter_example_focus">format="rp1;rp2"</span> byte-skip="odd"/&gt;<br>
-  ...<br>
+Â  ...<br>
 &lt;/structure&gt;<br>
 &lt;<span class="parameter_example_focus">format
 id="rp1"</span>&gt;&lt;substract&gt;44&lt;/substract&gt;&lt;/format&gt;<br>
@@ -475,22 +475,22 @@ of the corresponding profile<br>
 profiles are shortcuts to quickly decode an element using a set of properties
 frequently used together<br>
 base-40<a href="#ref_002"><sup>[2]</sup></a>:<br>
-    src-unit-size="16"<br>
-    base="40"<br>
-    dst-unit-size="3"<br>
-    ascii-offset="64"<br>
+Â Â Â  src-unit-size="16"<br>
+Â Â Â  base="40"<br>
+Â Â Â  dst-unit-size="3"<br>
+Â Â Â  ascii-offset="64"<br>
 base-32:<br>
-    src-unit-size="16"<br>
-    base="32"<br>
-    dst-unit-size="3"<br>
-    ascii-offset="64"<br>
+Â Â Â  src-unit-size="16"<br>
+Â Â Â  base="32"<br>
+Â Â Â  dst-unit-size="3"<br>
+Â Â Â  ascii-offset="64"<br>
 bcd:<br>
-    nibble-skip="odd"<br>
-    base="16"<br>
+Â Â Â  nibble-skip="odd"<br>
+Â Â Â  base="16"<br>
 bcd-le:<br>
-    endianness="little_endian"<br>
-    nibble-skip="odd"<br>
-    base="16"</div>
+Â Â Â  endianness="little_endian"<br>
+Â Â Â  nibble-skip="odd"<br>
+Â Â Â  base="16"</div>
 
 <div class="parameter_example">
 ex: trackfld.xml<br>
@@ -518,7 +518,7 @@ byte-trim="0x24"/&gt;</div>
 <div class="parameter_syntax">
 <a id="tag_elt_endianness" name="tag_elt_endianness"></a>structure &gt; elt
 ?endianness="big_endian|little_endian"</div>
-optional identifier defining the endianness of a group of bytes (default =
+optional identifier definingÂ the endianness of a group of bytes (default =
 big_endian).<br>
 "The term 'Endian' refers to the order of storing bytes in computer memory. In
 'Big Endian' scheme, the most significant byte is stored in the lowest memory
@@ -694,7 +694,7 @@ ex: -<br>
 <div class="parameter_syntax">
 <a id="tag_elt_bitmask" name="tag_elt_bitmask"></a>structure &gt; elt
 ?bitmask="&lt;bitmask_identifier&gt;"</div>
-optional identifier  specifying a bitmask definition to be used to select some
+optional identifierÂ  specifying a bitmask definition to be used to select some
 bits of the input data.<br>
 see bitmask object definition for more information.<br>
 
@@ -705,9 +705,9 @@ ex: klax.xml<br>
 table-index-format="*2" <span
 class="parameter_example_focus">bitmask="score_odd"</span>/&gt;<br>
  ...<br>
-&lt;<span class="parameter_example_focus">bitmask id="score_odd"</span>&gt;  
-&lt;!-- 6        7        8        9       10       11       12 //--&gt;<br>
-  &lt;character       mask="11111111 00000000 00000000 00000000 11111111
+&lt;<span class="parameter_example_focus">bitmask id="score_odd"</span>&gt;Â Â 
+&lt;!-- 6Â Â Â Â Â Â Â  7Â Â Â Â Â Â Â  8Â Â Â Â Â Â Â  9Â Â Â Â Â Â  10Â Â Â Â Â Â  11Â Â Â Â Â Â  12 //--&gt;<br>
+Â  &lt;characterÂ Â Â Â Â Â  mask="11111111 00000000 00000000 00000000 11111111
 00000000 11111111"/&gt;<br>
 &lt;/bitmask&gt;</div>
 </div>
@@ -788,7 +788,7 @@ from the decimal representation.<br>
 base="16" means that the value will be converted back into hexadecimal.<br>
 0123<sub>16</sub> -&gt; 291<sub>10</sub> (auto) -&gt; base="16" -&gt;
 123<sub>16</sub> -&gt; element value = 123<br>
-currently known base values used: 10, 16, 32, 40  but more are supported.<br>
+currently known base values used: 10, 16, 32, 40Â  but more are supported.<br>
 
 
 <div class="parameter_example">
@@ -851,7 +851,7 @@ class="parameter_example_focus">CS_XXX[&lt;offset&gt;,&lt;delta&gt;];&lt;custom_
 
 <div class="parameter_goal">
 supported pre-defined charsets:<br>
-  CS_NUMBER, defining number from 0 to 9, using ASCII codes </div>
+Â Â CS_NUMBER, defining number from 0 to 9, using ASCII codes </div>
 
 <div class="parameter_example">
 ex: sbomber.xml<br>
@@ -885,12 +885,12 @@ charset="ddonpach"/&gt;</div>
 ?ascii-step="&lt;integer&gt;"</div>
 optional integer specifying the decimal value separating two consecutive
 characters.<br>
-E -&gt; decimal input value: 148                 -&gt; ascii standard code: 148
+E -&gt; decimal input value: 148Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  -&gt; ascii standard code: 148
 / 4 + offset = 148 / 4 + 32 = 69 -&gt; ascii standard code = (decimal input
 value / step) + offset<br>
-F -&gt; decimal input value: 152 = 148+4   -&gt; ascii standard code: 152 / 4 +
+F -&gt; decimal input value: 152 = 148+4Â Â  -&gt; ascii standard code: 152 / 4 +
 offset = 152 / 4 + 32 = 70<br>
-G -&gt; decimal input value: 156 = 152+4  -&gt; ascii standard code: 156 / 4 +
+G -&gt; decimal input value: 156 = 152+4Â  -&gt; ascii standard code: 156 / 4 +
 offset = 156 / 4 + 32 = 71<br>
 see ASCII reference<a href="#ref_003"><sup>[3]</sup></a>.<br>
 
@@ -918,7 +918,7 @@ in the resulting array in memory, and consequently in the output table
 possible values:<br>
 <span style="font-weight: bold;">loop_index</span> =&gt; the elt index is the
 loop iterator position<br>
-<span class="xml_tags">  &lt;loop count="5"&gt;&lt;elt ... <span
+<span class="xml_tags">Â  &lt;loop count="5"&gt;&lt;elt ... <span
 class="xml_focus">table-index="loop_index"</span>/&gt;&lt;/loop&gt;</span><br>
 loop step 0 -&gt; elt index = 0<br>
 loop step 1 -&gt; elt index = 1<br>
@@ -927,7 +927,7 @@ loop step 2 -&gt; elt index = 2<br>
 <span style="font-weight: bold;">loop_reverse_index</span> =&gt; the elt index
 is (loop max - 1 - loop iterator position), typically used when elt order is
 inverted<br>
-<span class="xml_tags">   &lt;loop count="5"&gt;&lt;elt ... <span
+<span class="xml_tags">Â Â  &lt;loop count="5"&gt;&lt;elt ... <span
 class="xml_focus">table-index="loop_reverse_index"</span>/&gt;&lt;/loop&gt;</span><br>
 loop step 0 -&gt; elt index = 4<br>
 loop step 1 -&gt; elt index = 3<br>
@@ -938,30 +938,30 @@ loop step 4 -&gt; elt index = 0<br>
 <strong>last</strong>: the elt index is the value of the previous elt input
 data in the loop, typically used in a loop with multiple elts, the 1st one
 being the index or rank.<br>
-<span class="xml_tags">  &lt;loop count="5"&gt;<br>
-    &lt;elt id="elt1" ... <span
+<span class="xml_tags">Â Â &lt;loop count="5"&gt;<br>
+Â Â Â  &lt;elt id="elt1" ... <span
 class="xml_focus">table-index="itself"/</span>&gt;<br>
-    &lt;elt id="elt2" ... <span
+Â Â Â  &lt;elt id="elt2" ... <span
 class="xml_focus">table-index="last"/</span>&gt;<br>
-  &lt;/loop&gt;</span><br>
+Â  &lt;/loop&gt;</span><br>
 loop step 0 -&gt; elt1 index = elt1 value = X<br>
-                       elt2 index = index of last computed index = elt1 index =
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  elt2 index = index of last computed index = elt1 index =
 X<br>
 loop step 1 -&gt; elt1 index = elt1 value = Y<br>
-                       elt2 index = index of last computed index = elt1 index =
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  elt2 index = index of last computed index = elt1 index =
 Y<br>
  ...<br>
 <strong>itself</strong>: the elt index is the value of the elt itself (see
 previous example)<br>
 <strong>&lt;column&gt;:index_from_value</strong>: the elt index is the value of
 another elt located at the same loop step<br>
-<span class="xml_tags">  &lt;loop count="10"&gt;<br>
-    &lt;elt ... type="int" id="RANKPOINTER" .../&gt;<br>
-  &lt;/loop&gt;<br>
-  &lt;loop count="10"&gt;<br>
-    &lt;elt ... id="SCORE" <span
+<span class="xml_tags">Â  &lt;loop count="10"&gt;<br>
+Â Â Â  &lt;elt ... type="int" id="RANKPOINTER" .../&gt;<br>
+Â  &lt;/loop&gt;<br>
+Â  &lt;loop count="10"&gt;<br>
+Â Â Â  &lt;elt ... id="SCORE" <span
 class="xml_focus">table-index="RANKPOINTER:index_from_value"</span> .../&gt;<br>
-  &lt;/loop&gt;<br>
+Â  &lt;/loop&gt;<br>
 </span>loop step 0, RANKPOINTER[0].value = X -&gt; SCORE index = X<br>
 loop step 1, RANKPOINTER[1].value = Y -&gt; SCORE index = Y<br>
  ...<br>
@@ -972,37 +972,37 @@ another elt sharing the same value<br>
 <div class="parameter_example">
 ex: tempest.xml<br>
 &lt;loop count="8"&gt;<br>
-  &lt;elt size="3" type="text" id="NAME" <span
+Â  &lt;elt size="3" type="text" id="NAME" <span
 class="parameter_example_focus">table-index="loop_reverse_index"</span>
 endianness="little_endian" charset="tempest" ascii-offset="65"/&gt;<br>
 &lt;/loop&gt;<br>
 <br>
 ex: 1942.xml<br>
 &lt;loop count="25"&gt;<br>
-  &lt;elt size="1" type="int"  id="RANK"    <span
+Â  &lt;elt size="1" type="int"Â  id="RANK"Â Â Â  <span
 class="parameter_example_focus">table-index="itself"</span>/&gt;<br>
-  &lt;elt size="4" type="int"  id="SCORE"   <span
+Â  &lt;elt size="4" type="int"Â  id="SCORE"Â Â  <span
 class="parameter_example_focus">table-index="last"</span> base="16"/&gt;<br>
-  &lt;elt size="8" type="text" id="NAME"    <span
+Â  &lt;elt size="8" type="text" id="NAME"Â Â Â  <span
 class="parameter_example_focus">table-index="last"</span> ascii-offset="55"
 charset="cs1942"/&gt;<br>
-  &lt;elt size="1" type="int"  id="STAGE"   <span
+Â  &lt;elt size="1" type="int"Â  id="STAGE"Â Â  <span
 class="parameter_example_focus">table-index="last"</span>/&gt;<br>
-  &lt;elt size="2" type="raw"  id="UNKNOWN" <span
+Â  &lt;elt size="2" type="raw"Â  id="UNKNOWN" <span
 class="parameter_example_focus">table-index="last"</span>/&gt; &lt;!--
 completion %, hit rate % ? //--&gt;<br>
 &lt;/loop&gt;<br>
 <br>
 ex: gng.xml<br>
 &lt;loop count="10"&gt;<br>
-  &lt;elt size="2" type="int" id="RANKPOINTER" format="rp1;rp2"
+Â  &lt;elt size="2" type="int" id="RANKPOINTER" format="rp1;rp2"
 byte-skip="odd"/&gt;<br>
 &lt;/loop&gt;<br>
 &lt;loop count="10"&gt;<br>
-  &lt;elt size="4" type="int"  id="SCORE" <span
+Â  &lt;elt size="4" type="int"Â  id="SCORE" <span
 class="parameter_example_focus">table-index="RANKPOINTER:index_from_value"</span>
 base="16"/&gt;<br>
-  &lt;elt size="3" type="text" id="NAME"  <span
+Â  &lt;elt size="3" type="text" id="NAME"Â  <span
 class="parameter_example_focus">table-index="RANKPOINTER:index_from_value"</span>
 charset="gng"/&gt;<br>
 &lt;/loop&gt;<br>
@@ -1033,17 +1033,17 @@ more than one format identifier can be specified, separated by ';'</div>
 <div class="parameter_example">
 ex: klax.xml<br>
 &lt;loop count="5"&gt;<br>
-  &lt;elt size="7"  type="int"  id="SCORE" table-index="loop_index" <span
-class="parameter_example_focus">table-index-format="*2"</span>  
+Â  &lt;elt size="7"Â  type="int"Â  id="SCORE" table-index="loop_index" <span
+class="parameter_example_focus">table-index-format="*2"</span>Â Â 
 bitmask="score_odd"/&gt;<br>
-  &lt;elt size="6"  type="text" id="NAME"  table-index="loop_index" <span
-class="parameter_example_focus">table-index-format="*2"</span>  
-bitmask="name_odd"  decoding-profile="base-40" charset="klax"
+Â  &lt;elt size="6"Â  type="text" id="NAME"Â  table-index="loop_index" <span
+class="parameter_example_focus">table-index-format="*2"</span>Â Â 
+bitmask="name_odd"Â  decoding-profile="base-40" charset="klax"
 format="+dot"/&gt;<br>
-  &lt;elt size="6"  type="int"  id="SCORE" table-index="loop_index" <span
+Â  &lt;elt size="6"Â  type="int"Â  id="SCORE" table-index="loop_index" <span
 class="parameter_example_focus">table-index-format="*2;+1"</span>
 bitmask="score_even"/&gt;<br>
-  &lt;elt size="4"  type="text" id="NAME"  table-index="loop_index" <span
+Â  &lt;elt size="4"Â  type="text" id="NAME"Â  table-index="loop_index" <span
 class="parameter_example_focus">table-index-format="*2;+1"</span>
 bitmask="name_even" decoding-profile="base-40" charset="klax"
 format="+dot"/&gt;<br>
@@ -1296,9 +1296,9 @@ it is used only when extracting data in xml </div>
 ex: sonicwi3.xml<br>
 &lt;table <span class="parameter_example_focus">id="2 PLAYERS"</span>
 line-ignore="2P SCORE:0"&gt;<br>
-  &lt;column id="RANK" src="index" format="+1"/&gt;<br>
-  &lt;column id="2P SCORE"/&gt;<br>
-  ...</div>
+Â  &lt;column id="RANK" src="index" format="+1"/&gt;<br>
+Â  &lt;column id="2P SCORE"/&gt;<br>
+Â  ...</div>
 </div>
 
 <div class="parameter">
@@ -1316,9 +1316,9 @@ that have a SCORE value equals to 0 must be skipped</div>
 ex: tempest.xml<br>
 &lt;table <span
 class="parameter_example_focus">line-ignore="SCORE:0"</span>&gt;<br>
-  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
-  &lt;column id="NAME"/&gt;<br>
-  &lt;column id="<span class="parameter_example_focus">SCORE</span>"/&gt;<br>
+Â  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
+Â  &lt;column id="NAME"/&gt;<br>
+Â  &lt;column id="<span class="parameter_example_focus">SCORE</span>"/&gt;<br>
 &lt;/table&gt;</div>
 </div>
 
@@ -1340,13 +1340,13 @@ ex: dino.xml<br>
 &lt;table <span
 class="parameter_example_focus">line-ignore-operator="&gt;"</span>
 line-ignore="SCORE:99000000"&gt;<br>
-  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
-  &lt;column id="SCORE"/&gt;<br>
-  &lt;column id="NAME"/&gt;<br>
-  &lt;column id="CHARACTER" format="character"/&gt;<br>
-  &lt;column id="STAGE"/&gt;<br>
-  &lt;column id="SPACE" display="debug"/&gt;<br>
-  &lt;column id="UNKNOWN" format="0x" display="debug"/&gt; <br>
+Â  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
+Â  &lt;column id="SCORE"/&gt;<br>
+Â  &lt;column id="NAME"/&gt;<br>
+Â  &lt;column id="CHARACTER" format="character"/&gt;<br>
+Â  &lt;column id="STAGE"/&gt;<br>
+Â  &lt;column id="SPACE" display="debug"/&gt;<br>
+Â  &lt;column id="UNKNOWN" format="0x" display="debug"/&gt; <br>
 &lt;/table&gt;</div>
 </div>
 
@@ -1369,12 +1369,12 @@ to the original display algorithm</div>
 ex: srumbler.xml<br>
 &lt;table sort-order="asc" <span class="parameter_example_focus">sort="SCORE
 RANK"</span>&gt;<br>
-  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
-  &lt;column id="SCORE"/&gt;<br>
-  &lt;column id="<span class="parameter_example_focus">SCORE RANK</span>"
+Â  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
+Â  &lt;column id="SCORE"/&gt;<br>
+Â  &lt;column id="<span class="parameter_example_focus">SCORE RANK</span>"
 display="debug"/&gt;<br>
-  &lt;column id="NAME"/&gt;<br>
-  &lt;column id="NAME RANK" display="debug"/&gt;<br>
+Â  &lt;column id="NAME"/&gt;<br>
+Â  &lt;column id="NAME RANK" display="debug"/&gt;<br>
 &lt;/table&gt;</div>
 </div>
 
@@ -1392,11 +1392,11 @@ attribute has been defined (default is 'asc')</div>
 ex: srumbler.xml<br>
 &lt;table <span class="parameter_example_focus">sort-order="asc"</span>
 sort="SCORE RANK"&gt;<br>
-  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
-  &lt;column id="SCORE"/&gt;<br>
-  &lt;column id="SCORE RANK" display="debug"/&gt;<br>
-  &lt;column id="NAME"/&gt;<br>
-  &lt;column id="NAME RANK" display="debug"/&gt;<br>
+Â  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
+Â  &lt;column id="SCORE"/&gt;<br>
+Â  &lt;column id="SCORE RANK" display="debug"/&gt;<br>
+Â  &lt;column id="NAME"/&gt;<br>
+Â  &lt;column id="NAME RANK" display="debug"/&gt;<br>
 &lt;/table&gt;</div>
 </div>
 
@@ -1421,10 +1421,10 @@ ex: kof2001.xml<br>
 &lt;table id="WINS" sort="<span class="parameter_example_focus">WIN %</span>"
 <span class="parameter_example_focus">sort-format="TrimR%"</span>
 sort-order="desc"&gt;<br>
-  &lt;column id="CHARACTER" src="unsorted_index" format="character"/&gt;<br>
-  &lt;column id="<span class="parameter_example_focus">WIN %</span>" src="WIN
+Â Â &lt;column id="CHARACTER" src="unsorted_index" format="character"/&gt;<br>
+Â Â &lt;column id="<span class="parameter_example_focus">WIN %</span>" src="WIN
 CHARACTER" format="win;Suffix%"/&gt;<br>
-  &lt;column id="TOTAL" display="debug"/&gt;<br>
+Â Â &lt;column id="TOTAL" display="debug"/&gt;<br>
 &lt;/table&gt;</div>
 </div>
 
@@ -1442,9 +1442,9 @@ in case 'line-ignore' attribute is not adapted, which is very rare</div>
 ex: carnival.xml<br>
 &lt;table line-ignore="SCORE:0" <span
 class="parameter_example_focus">lines-max="3"</span>&gt;<br>
-  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
-  &lt;column id="SCORE" format="*10"/&gt;<br>
-  &lt;column id="NAME"/&gt;<br>
+Â  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
+Â  &lt;column id="SCORE" format="*10"/&gt;<br>
+Â  &lt;column id="NAME"/&gt;<br>
 &lt;/table&gt;</div>
 </div>
 
@@ -1467,12 +1467,12 @@ debug: the table is displayed only if debug information are requested, using
 <div class="parameter_example">
 ex: srumbler.xml<br>
 &lt;table sort-order="asc" sort="SCORE RANK"&gt;<br>
-  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
-  &lt;column id="SCORE"/&gt;<br>
-  &lt;column id="SCORE RANK" <span
+Â  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
+Â  &lt;column id="SCORE"/&gt;<br>
+Â  &lt;column id="SCORE RANK" <span
 class="parameter_example_focus">display="debug"</span>/&gt;<br>
-  &lt;column id="NAME"/&gt;<br>
-  &lt;column id="NAME RANK" <span
+Â  &lt;column id="NAME"/&gt;<br>
+Â  &lt;column id="NAME RANK" <span
 class="parameter_example_focus">display="debug"</span>/&gt;<br>
 &lt;/table&gt;</div>
 </div>
@@ -1702,9 +1702,9 @@ see related format operations definition for more information.</div>
 <div class="parameter_example">
 ex: ddonpach.xml<br>
 &lt;table&gt;<br>
-  &lt;column id="RANK" src="index" <span
+Â  &lt;column id="RANK" src="index" <span
 class="parameter_example_focus">format="+1"</span>/&gt;<br>
-  ...<br>
+Â  ...<br>
 &lt;/table&gt;<br>
 &lt;<span class="parameter_example_focus">format
 id="+1"</span>&gt;&lt;add&gt;1&lt;/add&gt;&lt;/format&gt; &lt;!-- not strictly
@@ -1729,12 +1729,12 @@ debug: the column is displayed only if debug information are requested, using
 <div class="parameter_example">
 ex: srumbler.xml<br>
 &lt;table sort-order="asc" sort="SCORE RANK"&gt;<br>
-  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
-  &lt;column id="SCORE"/&gt;<br>
-  &lt;column id="SCORE RANK" <span
+Â  &lt;column id="RANK" format="+1" src="index"/&gt;<br>
+Â  &lt;column id="SCORE"/&gt;<br>
+Â  &lt;column id="SCORE RANK" <span
 class="parameter_example_focus">display="debug"</span>/&gt;<br>
-  &lt;column id="NAME"/&gt;<br>
-  &lt;column id="NAME RANK" <span
+Â  &lt;column id="NAME"/&gt;<br>
+Â  &lt;column id="NAME RANK" <span
 class="parameter_example_focus">display="debug"</span>/&gt;<br>
 &lt;/table&gt;</div>
 </div>
@@ -1753,14 +1753,14 @@ in this case, column id is not necessary.</div>
 <div class="parameter_example">
 ex: spnchoutj.xml<br>
 &lt;format id="percentage" input-as-subcolumns-input="true"&gt;<br>
-  &lt;concat&gt;<br>
-    &lt;column format="integer"/&gt;<br>
-    <span
+Â  &lt;concat&gt;<br>
+Â Â Â  &lt;column format="integer"/&gt;<br>
+Â Â Â  <span
 class="parameter_example_focus">&lt;column&gt;.&lt;/column&gt;</span><br>
-    &lt;column format="decimal"/&gt;<br>
-    <span
+Â Â Â  &lt;column format="decimal"/&gt;<br>
+Â Â Â  <span
 class="parameter_example_focus">&lt;column&gt;%&lt;/column&gt;</span><br>
-  &lt;/concat&gt;<br>
+Â  &lt;/concat&gt;<br>
 &lt;/format&gt;</div>
 </div>
 
@@ -1768,13 +1768,13 @@ class="parameter_example_focus">&lt;column&gt;%&lt;/column&gt;</span><br>
 </p>
 
 <p class="xml_tags"><span>&lt;hi2txt&gt;<span style="color:#008000"><br>
-  <span
+Â Â <span
 style="color: black;">&lt;structure&gt;</span></span>...&lt;/structure&gt;<br>
-</span>  <span
+</span>Â  <span
 style="color: #009900;">&lt;bitmask&gt;...&lt;/bitmask&gt;</span><span><br>
-  &lt;output&gt;...&lt;/output&gt;<br>
-</span>  <span style="color: #009900;">&lt;format&gt;...&lt;/format&gt;<br>
-  &lt;charset&gt;...&lt;/charset&gt;</span><span><br>
+Â  &lt;output&gt;...&lt;/output&gt;<br>
+</span>Â  <span style="color: #009900;">&lt;format&gt;...&lt;/format&gt;<br>
+Â  &lt;charset&gt;...&lt;/charset&gt;</span><span><br>
 &lt;/hi2txt&gt;</span></p>
 
 <p></p>
@@ -1803,7 +1803,7 @@ column.</div>
 ex: spnchoutj.xml<br>
 &lt;format <span class="parameter_example_focus">id="percentage"</span>
 input-as-subcolumns-input="true"&gt;<br>
-  ...<br>
+Â  ...<br>
 &lt;/format&gt;<br>
 </div>
 </div>
@@ -1826,7 +1826,7 @@ doc</a> of the class 'Formatter'.</div>
 ex: trackfld.xml<br>
 &lt;format id="time" <span
 class="parameter_example_focus">formatter="%.2fsec"</span>&gt;<br>
-  &lt;divide&gt;100&lt;/divide&gt;<br>
+Â  &lt;divide&gt;100&lt;/divide&gt;<br>
 &lt;/format&gt;</div>
 </div>
 
@@ -1841,15 +1841,15 @@ keyword specifying if the format is applicable on the input value as a whole or
 on each 'character' of the input value (default is value).<br>
 it is targeting 'text' inpout element.<br>
 supported keywords:<br>
-    char =&gt; format is applied on each character of the input value<br>
-    value =&gt; format is applied one time for the whole value</div>
+Â Â Â  char =&gt; format is applied on each character of the input value<br>
+Â Â Â  value =&gt; format is applied one time for the whole value</div>
 
 <div class="parameter_example">
 ex: klax.xml, where the format append '.' after each character of the input
 value.<br>
 &lt;format id="+dot" <span
 class="parameter_example_focus">apply-to="char"</span>&gt;<br>
-  &lt;suffix&gt;.&lt;/suffix&gt;<br>
+Â  &lt;suffix&gt;.&lt;/suffix&gt;<br>
 &lt;/format&gt;</div>
 </div>
 
@@ -1881,12 +1881,12 @@ format@id="medal"/trim). <span class="since">[since version 1.2]</span> </div>
 ex: spnchoutj.xml<br>
 &lt;format id="percentage" <span
 class="parameter_example_focus">input-as-subcolumns-input="true"</span>&gt;<br>
-  &lt;concat&gt;<br>
-    &lt;column format="integer"/&gt;<br>
-    &lt;column&gt;.&lt;/column&gt;<br>
-    &lt;column format="decimal"/&gt;<br>
-    &lt;column&gt;%&lt;/column&gt;<br>
-  &lt;/concat&gt;<br>
+Â  &lt;concat&gt;<br>
+Â Â Â  &lt;column format="integer"/&gt;<br>
+Â Â Â  &lt;column&gt;.&lt;/column&gt;<br>
+Â Â Â  &lt;column format="decimal"/&gt;<br>
+Â Â Â  &lt;column&gt;%&lt;/column&gt;<br>
+Â  &lt;/concat&gt;<br>
 &lt;/format&gt;</div>
 </div>
 
@@ -1905,7 +1905,7 @@ integer added to the value of the column/field calling this format</div>
 <div class="parameter_example">
 ex: klax.xml<br>
 &lt;format id="+1"&gt;<br>
-  <span class="parameter_example_focus">&lt;add&gt;1&lt;/add&gt;</span><br>
+Â  <span class="parameter_example_focus">&lt;add&gt;1&lt;/add&gt;</span><br>
 &lt;/format&gt;</div>
 </div>
 
@@ -1939,7 +1939,7 @@ ex: tgm2.xml =&gt; for medal value 0, nothing is appended and this '0' value is
 not returned/displayed<br>
 <span class="since">[since version 1.2]</span><br>
 &lt;format id="medal_ac"&gt;<br>
-  &lt;prefix <span class="parameter_example_focus">empty="0"
+Â Â &lt;prefix <span class="parameter_example_focus">empty="0"
 consume="yes"</span>&gt; AC&lt;/prefix&gt;<br>
 &lt;/format&gt;</div>
 </div>
@@ -1968,7 +1968,7 @@ attribute). <span class="since">[since version 1.3]</span> </div>
 <div class="parameter_example">
 ex: klax.xml<br>
 &lt;format id="+dot" apply-to="char"&gt;<br>
-  <span
+Â  <span
 class="parameter_example_focus">&lt;suffix&gt;.&lt;/suffix&gt;</span><br>
 &lt;/format&gt;</div>
 </div>
@@ -1988,10 +1988,10 @@ attribute).</div>
 <div class="parameter_example">
 ex: turfmast.xml<br>
 &lt;format id="-"&gt;<br>
-  <span
+Â  <span
 class="parameter_example_focus">&lt;multiply&gt;-1&lt;/multiply&gt;</span><br>
-  &lt;add&gt;256&lt;/add&gt;<br>
-  &lt;prefix&gt;-&lt;/prefix&gt;<br>
+Â  &lt;add&gt;256&lt;/add&gt;<br>
+Â  &lt;prefix&gt;-&lt;/prefix&gt;<br>
 &lt;/format&gt;</div>
 </div>
 
@@ -2017,7 +2017,7 @@ attribute).</div>
 <div class="parameter_example">
 ex: trackfld.xml<br>
 &lt;format id="time" formatter="%.2fsec"&gt;<br>
-  <span
+Â  <span
 class="parameter_example_focus">&lt;divide&gt;100&lt;/divide&gt;</span><br>
 &lt;/format&gt;</div>
 </div>
@@ -2038,10 +2038,10 @@ attribute). </div>
 <div class="parameter_example">
 ex: ddonpach.xml<br>
 &lt;format id="score"&gt;<br>
-  <span class="parameter_example_focus">&lt;sum&gt;<br>
-    &lt;column id="SCORE1" format="*10"/&gt;<br>
-    &lt;column id="SCORE2"/&gt;<br>
-  &lt;/sum&gt;</span><br>
+Â  <span class="parameter_example_focus">&lt;sum&gt;<br>
+Â Â Â  &lt;column id="SCORE1" format="*10"/&gt;<br>
+Â Â Â  &lt;column id="SCORE2"/&gt;<br>
+Â  &lt;/sum&gt;</span><br>
 &lt;/format&gt;</div>
 </div>
 
@@ -2060,21 +2060,21 @@ improved readibility <span class="since">[since version
 <div class="parameter_example">
 ex: ddonpach.xml<br>
 &lt;format id="area"&gt;<br>
-  <span class="parameter_example_focus">&lt;concat&gt;<br>
-    &lt;column id="LOOP"  format="default_loop;-"/&gt;<br>
-    &lt;column id="STAGE" format="default_stage"/&gt;<br>
-  &lt;/concat&gt;</span><br>
+Â  <span class="parameter_example_focus">&lt;concat&gt;<br>
+Â Â Â  &lt;column id="LOOP"Â  format="default_loop;-"/&gt;<br>
+Â Â Â  &lt;column id="STAGE" format="default_stage"/&gt;<br>
+Â  &lt;/concat&gt;</span><br>
 &lt;/format&gt;<br>
 <br>
 ex: kindmgp.xml<br>
 &lt;format id="time" input-as-subcolumns-input="yes"&gt;<br>
-  &lt;concat&gt;<br>
-    &lt;column format="MN"/&gt;<br>
-    <span class="parameter_example_focus">&lt;txt&gt;'&lt;/txt&gt;</span><br>
-    &lt;column format="SEC"/&gt;<br>
-    <span class="parameter_example_focus">&lt;txt&gt;''&lt;/txt&gt;</span><br>
-    &lt;column format="CS"/&gt;<br>
-  &lt;/concat&gt;<br>
+Â  &lt;concat&gt;<br>
+Â Â Â  &lt;column format="MN"/&gt;<br>
+Â Â Â  <span class="parameter_example_focus">&lt;txt&gt;'&lt;/txt&gt;</span><br>
+Â Â Â  &lt;column format="SEC"/&gt;<br>
+Â Â Â  <span class="parameter_example_focus">&lt;txt&gt;''&lt;/txt&gt;</span><br>
+Â Â Â  &lt;column format="CS"/&gt;<br>
+Â  &lt;/concat&gt;<br>
 &lt;/format&gt;<br>
 </div>
 </div>
@@ -2091,11 +2091,11 @@ list of columns/fields from where the minimum value will be selected</div>
 <div class="parameter_example">
 ex: -<br>
 &lt;format id="score"&gt;<br>
-  <span class="parameter_example_focus">&lt;min&gt;<br>
-    &lt;field id="VALUE_1"/&gt;<br>
-    &lt;field id="VALUE_2"/&gt;<br>
-    &lt;field id="VALUE_3"/&gt;<br>
-  &lt;/min&gt;</span><br>
+Â  <span class="parameter_example_focus">&lt;min&gt;<br>
+Â Â Â  &lt;field id="VALUE_1"/&gt;<br>
+Â Â Â  &lt;field id="VALUE_2"/&gt;<br>
+Â Â Â  &lt;field id="VALUE_3"/&gt;<br>
+Â  &lt;/min&gt;</span><br>
 &lt;/format&gt;</div>
 </div>
 
@@ -2111,11 +2111,11 @@ list of columns/fields from where the maximum value will be selected</div>
 <div class="parameter_example">
 ex: phoenix.xml<br>
 &lt;format id="score"&gt;<br>
-  <span class="parameter_example_focus">&lt;max&gt;<br>
-    &lt;field id="TOP SCORE ALT"/&gt;<br>
-    &lt;field id="SCORE 1 ALT"/&gt;<br>
-    &lt;field id="SCORE 2 ALT"/&gt;<br>
-  &lt;/max&gt;</span><br>
+Â  <span class="parameter_example_focus">&lt;max&gt;<br>
+Â Â Â  &lt;field id="TOP SCORE ALT"/&gt;<br>
+Â Â Â  &lt;field id="SCORE 1 ALT"/&gt;<br>
+Â Â Â  &lt;field id="SCORE 2 ALT"/&gt;<br>
+Â  &lt;/max&gt;</span><br>
 &lt;/format&gt;</div>
 </div>
 
@@ -2140,8 +2140,8 @@ href="#auto_format">format</a> attribute). <span class="since">[since version
 <div class="parameter_example">
 ex: spnchoutj.xml<br>
 &lt;format id="ms"&gt;<br>
-  &lt;remainder&gt;100&lt;/remainder&gt;<br>
-  <span class="parameter_example_focus">&lt;pad direction="left"
+Â  &lt;remainder&gt;100&lt;/remainder&gt;<br>
+Â  <span class="parameter_example_focus">&lt;pad direction="left"
 max="2"&gt;0&lt;/pad&gt;</span><br>
 &lt;/format&gt;</div>
 </div>
@@ -2165,7 +2165,7 @@ attribute).</div>
 <div class="parameter_example">
 ex: twincobr.xml<br>
 &lt;format id="trim"&gt;<br>
-  <span class="parameter_example_focus">&lt;trim
+Â  <span class="parameter_example_focus">&lt;trim
 direction="left"&gt;0&lt;/trim&gt;</span><br>
 &lt;/format&gt;</div>
 </div>
@@ -2185,7 +2185,7 @@ attribute). </div>
 <div class="parameter_example">
 ex: gng.xml<br>
 &lt;format id="rp1"&gt;<br>
-  <span
+Â  <span
 class="parameter_example_focus">&lt;substract&gt;44&lt;/substract&gt;</span><br>
 &lt;/format&gt;</div>
 </div>
@@ -2212,9 +2212,9 @@ attribute). </div>
 <div class="parameter_example">
 ex: spnchoutj.xml<br>
 &lt;format id="ms"&gt;<br>
-  <span
+Â  <span
 class="parameter_example_focus">&lt;remainder&gt;100&lt;/remainder&gt;</span><br>
-  &lt;pad direction="left" max="2"&gt;0&lt;/pad&gt;<br>
+Â  &lt;pad direction="left" max="2"&gt;0&lt;/pad&gt;<br>
 &lt;/format&gt;</div>
 </div>
 
@@ -2232,7 +2232,7 @@ class="since">[since version 1.3]</span></div>
 <div class="parameter_example">
 ex: -<br>
 &lt;format id="integer"&gt;<br>
-  <span class="parameter_example_focus">&lt;trunc/&gt;</span><br>
+Â  <span class="parameter_example_focus">&lt;trunc/&gt;</span><br>
 &lt;/format&gt;</div>
 </div>
 
@@ -2250,7 +2250,7 @@ class="since">[since version 1.3]</span></div>
 <div class="parameter_example">
 ex: -<br>
 &lt;format id="rounded"&gt;<br>
-  <span class="parameter_example_focus">&lt;round/&gt;</span><br>
+Â  <span class="parameter_example_focus">&lt;round/&gt;</span><br>
 &lt;/format&gt;</div>
 </div>
 
@@ -2276,10 +2276,10 @@ attribute). </div>
 <div class="parameter_example">
 ex: spnchoutj.xml<br>
 &lt;format id="sec"&gt;<br>
-  &lt;remainder&gt;10000&lt;/remainder&gt;<br>
-  <span
+Â  &lt;remainder&gt;10000&lt;/remainder&gt;<br>
+Â  <span
 class="parameter_example_focus">&lt;divide_trunc&gt;100&lt;/divide_trunc&gt;</span><br>
-  &lt;pad direction="left" max="2"&gt;0&lt;/pad&gt;<br>
+Â  &lt;pad direction="left" max="2"&gt;0&lt;/pad&gt;<br>
 &lt;/format&gt;</div>
 </div>
 
@@ -2306,14 +2306,14 @@ attribute). </div>
 <div class="parameter_example">
 ex: mushitam.xml<br>
 &lt;format id="time" input-as-subcolumns-input="yes"&gt;<br>
-  &lt;concat&gt;<br>
-    &lt;column format="d60;d60"/&gt;<br>
-    &lt;txt&gt;:&lt;/txt&gt;<br>
-    &lt;column format="d60;%60;PadL20"/&gt;<br>
-    &lt;txt&gt;:&lt;/txt&gt;<br>
-    &lt;column format="%60;*100;<span
+Â  &lt;concat&gt;<br>
+Â  Â  &lt;column format="d60;d60"/&gt;<br>
+Â  Â  &lt;txt&gt;:&lt;/txt&gt;<br>
+Â  Â  &lt;column format="d60;%60;PadL20"/&gt;<br>
+Â  Â  &lt;txt&gt;:&lt;/txt&gt;<br>
+Â  Â  &lt;column format="%60;*100;<span
 class="parameter_example_focus">D60</span>;PadL20"/&gt;<br>
-  &lt;/concat&gt;<br>
+Â  &lt;/concat&gt;<br>
 &lt;/format&gt; </div>
 </div>
 
@@ -2329,7 +2329,7 @@ all occurences of the 'src' string will be replaced by the 'dst' string</div>
 <div class="parameter_example">
 ex: suprmrio.xml<br>
 &lt;format id="world"&gt;<br>
-  <span class="parameter_example_focus">&lt;replace src="0"
+Â  <span class="parameter_example_focus">&lt;replace src="0"
 dst="W-"/&gt;</span><br>
 &lt;/format&gt;</div>
 </div>
@@ -2353,7 +2353,7 @@ attribute). </div>
 <div class="parameter_example">
 ex:<br>
 &lt;format id="medal"&gt;<br>
-  <span class="parameter_example_focus">&lt;shift&gt;2&lt;/shift&gt;</span><br>
+Â  <span class="parameter_example_focus">&lt;shift&gt;2&lt;/shift&gt;</span><br>
 &lt;/format&gt;</div>
 </div>
 
@@ -2373,7 +2373,7 @@ attribute).</div>
 <div class="parameter_example">
 ex:<br>
 &lt;format id="trial"&gt;<br>
-  <span class="parameter_example_focus">&lt;lowercase/&gt;<br>
+Â  <span class="parameter_example_focus">&lt;lowercase/&gt;<br>
 </span>&lt;/format&gt;</div>
 </div>
 
@@ -2397,7 +2397,7 @@ class="parameter_example_focus">UC</span>;parenthesis"/&gt;<br>
 <br>
 ex:<br>
 &lt;format id="trial"&gt;<br>
-  <span class="parameter_example_focus">&lt;uppercase/&gt;<br>
+Â  <span class="parameter_example_focus">&lt;uppercase/&gt;<br>
 </span>&lt;/format&gt;</div>
 </div>
 
@@ -2417,7 +2417,7 @@ attribute).</div>
 <div class="parameter_example">
 ex:<br>
 &lt;format id="trial"&gt;<br>
-  <span class="parameter_example_focus">&lt;capitalize/&gt;<br>
+Â  <span class="parameter_example_focus">&lt;capitalize/&gt;<br>
 </span>&lt;/format&gt;</div>
 </div>
 
@@ -2443,17 +2443,17 @@ attribute).</div>
 <div class="parameter_example">
 ex: inthehunt.xml<br>
 &lt;structure file=".hi"&gt;<br>
-  ...<br>
-  &lt;loop count="12"&gt;<br>
-    &lt;elt size="2" type="int" id="POINTER" endianness="little_endian"
+Â  ...<br>
+Â  &lt;loop count="12"&gt;<br>
+Â  Â  &lt;elt size="2" type="int" id="POINTER" endianness="little_endian"
 table-index="itself" table-index-format="-384;/16" <span
 class="parameter_example_focus">format="LoopIndex"</span>/&gt;<br>
-  &lt;/loop&gt;<br>
+Â  &lt;/loop&gt;<br>
 &lt;/structure&gt;<br>
 &lt;output&gt;<br>
-  &lt;table line-ignore="NAME:" sort="POINTER"&gt;<br>
-  ...<br>
-  &lt;/table&gt;<br>
+Â  &lt;table line-ignore="NAME:" sort="POINTER"&gt;<br>
+Â  ...<br>
+Â  &lt;/table&gt;<br>
 &lt;/output&gt;<br>
 </div>
 </div>
@@ -2487,34 +2487,34 @@ if the input value doesn't match any case 'src'.<br>
 <div class="parameter_example">
 ex: 1941.xml<br>
 &lt;format id="grade_mapping"&gt;<br>
-  &lt;case src="0" dst="SECOND LIEUTENANT" <span
+Â  &lt;case src="0" dst="SECOND LIEUTENANT" <span
 class="parameter_example_focus">default="yes"</span>/&gt;<br>
-  &lt;case src="1" dst="FIRST LIEUTENANT"/&gt;<br>
-  &lt;case <span class="parameter_example_focus">src="2"</span>
+Â  &lt;case src="1" dst="FIRST LIEUTENANT"/&gt;<br>
+Â  &lt;case <span class="parameter_example_focus">src="2"</span>
 dst="CAPTAIN"/&gt;<br>
-  &lt;case src="3" dst="MAJOR"/&gt;<br>
-  &lt;case src="4" <span class="parameter_example_focus">dst="LIEUTENANT
+Â  &lt;case src="3" dst="MAJOR"/&gt;<br>
+Â  &lt;case src="4" <span class="parameter_example_focus">dst="LIEUTENANT
 COLONEL"</span>/&gt;<br>
-  &lt;case src="5" dst="COLONEL"/&gt;<br>
-  &lt;case src="6" dst="6"/&gt;<br>
-  &lt;case src="7" dst="7"/&gt;<br>
+Â  &lt;case src="5" dst="COLONEL"/&gt;<br>
+Â  &lt;case src="6" dst="6"/&gt;<br>
+Â  &lt;case src="7" dst="7"/&gt;<br>
 &lt;/format&gt;<br>
 <br>
 ex: ad2083.xml<br>
 &lt;format id="ad2083" apply-to="char"&gt;<br>
-  &lt;case <span class="parameter_example_focus">src="0x40"</span> dst="
+Â  &lt;case <span class="parameter_example_focus">src="0x40"</span> dst="
 "/&gt;<br>
-  &lt;case src="0x5C" dst="."/&gt;<br>
+Â  &lt;case src="0x5C" dst="."/&gt;<br>
 &lt;/format&gt;<br>
 <br>
 ex: multiple and different groups of 'case'<br>
 &lt;format id="medal"&gt;<br>
-  <span class="parameter_example_focus">&lt;case src="A"
+Â  <span class="parameter_example_focus">&lt;case src="A"
 dst="10"/&gt;</span><br>
-  <span class="parameter_example_focus">&lt;case src="B"
+Â  <span class="parameter_example_focus">&lt;case src="B"
 dst="100"/&gt;</span><br>
-  &lt;pad direction="left" max="3"&gt;0&lt;/pad&gt;<br>
-  <span class="parameter_example_focus2">&lt;case src="000"
+Â  &lt;pad direction="left" max="3"&gt;0&lt;/pad&gt;<br>
+Â  <span class="parameter_example_focus2">&lt;case src="000"
 dst=""/&gt;</span><br>
 &lt;/format&gt;<br>
 <br>
@@ -2534,13 +2534,13 @@ supported operators: &lt;, ==, &gt;, &gt;=, &lt;=, !=</div>
 
 <div class="parameter_example">
 ex: turfmast.xml<br>
-  &lt;format id="score"&gt;<br>
-    &lt;case src="0"                    dst="EVEN"/&gt;<br>
-    &lt;case src="240" <span
-class="parameter_example_focus">operator="&amp;lt;"</span>  format="+"/&gt;<br>
-    &lt;case src="240" <span
+Â  &lt;format id="score"&gt;<br>
+Â Â Â  &lt;case src="0"Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  dst="EVEN"/&gt;<br>
+Â Â Â  &lt;case src="240" <span
+class="parameter_example_focus">operator="&amp;lt;"</span>Â  format="+"/&gt;<br>
+Â Â Â  &lt;case src="240" <span
 class="parameter_example_focus">operator="&amp;gt;="</span> format="-"/&gt;<br>
-  &lt;/format&gt;</div>
+Â  &lt;/format&gt;</div>
 </div>
 
 <div class="parameter">
@@ -2554,8 +2554,8 @@ format &gt; ?case @operator-format
 
 <div class="parameter_goal">
 identifier allowing to format input value before applied the match.<br>
-    input value + operator-format = formated input value<br>
-    formated input value + operator + src value = 'case' matches or not<br>
+Â Â Â  input value + operator-format = formated input value<br>
+Â Â Â  formated input value + operator + src value = 'case' matches or not<br>
 more than one format identifier can be specified, separated by ';'</div>
 
 <div class="parameter_example">
@@ -2581,13 +2581,13 @@ more than one format identifier can be specified, separated by ';'</div>
 
 <div class="parameter_example">
 ex: turfmast.xml<br>
-  &lt;format id="score"&gt;<br>
-    &lt;case src="0"                    dst="EVEN"/&gt;<br>
-    &lt;case src="240" operator="&amp;lt;"  <span
+Â  &lt;format id="score"&gt;<br>
+Â Â Â  &lt;case src="0"Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  dst="EVEN"/&gt;<br>
+Â Â Â  &lt;case src="240" operator="&amp;lt;"Â  <span
 class="parameter_example_focus">format="+"</span>/&gt;<br>
-    &lt;case src="240" operator="&amp;gt;=" <span
+Â Â Â  &lt;case src="240" operator="&amp;gt;=" <span
 class="parameter_example_focus">format="-"</span>/&gt;<br>
-  &lt;/format&gt;</div>
+Â  &lt;/format&gt;</div>
 </div>
 </div>
 <br>
@@ -2613,15 +2613,15 @@ column.<br>
 <div class="parameter_example">
 ex: ddonpach.j<br>
 &lt;structure&gt;<br>
-  ...<br>
-  &lt;loop count="5"&gt;&lt;elt size="6" type="text" id="NAME" ... <span
+Â  ...<br>
+Â  &lt;loop count="5"&gt;&lt;elt size="6" type="text" id="NAME" ... <span
 class="parameter_example_focus">charset="ddonpach"</span>/&gt;&lt;/loop&gt;<br>
-  ...<br>
+Â  ...<br>
 &lt;/structure&gt;<br>
  ...<br>
 &lt;charset <span class="parameter_example_focus">id="ddonpach"</span>&gt;<br>
-  &lt;char src="0x00" dst=" "/&gt;<br>
-  &lt;char src="0x38" dst="."/&gt;<br>
+Â  &lt;char src="0x00" dst=" "/&gt;<br>
+Â  &lt;char src="0x38" dst="."/&gt;<br>
 &lt;/charset&gt;</div>
 <br>
 pre-defined charsets are defined: see <a
@@ -2657,8 +2657,8 @@ if the input value doesn't match any case 'src'.</div>
 <div class="parameter_example">
 ex: ddonpach.j<br>
 &lt;charset id="ddonpach"&gt;<br>
-  <span class="parameter_example_focus">&lt;char src="0x00" dst=" "/&gt;<br>
-  &lt;char src="0x38" dst="."/&gt;</span><br>
+Â  <span class="parameter_example_focus">&lt;char src="0x00" dst=" "/&gt;<br>
+Â  &lt;char src="0x38" dst="."/&gt;</span><br>
 &lt;/charset&gt;<br>
 <br>
 ex: mooncrst.xml<br>
@@ -2701,14 +2701,14 @@ column.
 
 <div class="parameter_example">
 ex: rtype.xml<br>
-&lt;elt size="3" type="int"  id="SCORE" <span
+&lt;elt size="3" type="int"Â  id="SCORE" <span
 class="parameter_example_focus">bitmask="score"</span> base="16"/&gt;<br>
  ...<br>
 &lt;<span class="parameter_example_focus">bitmask id="score"</span>&gt; &lt;!--
 bytes re-ordering: 1 - 0 - 2 //--&gt;<br>
-  &lt;character mask="00000000 11111111 00000000"/&gt;<br>
-  &lt;character mask="11111111 00000000 00000000"/&gt;<br>
-  &lt;character mask="00000000 00000000 11111111"/&gt;<br>
+Â  &lt;character mask="00000000 11111111 00000000"/&gt;<br>
+Â  &lt;character mask="11111111 00000000 00000000"/&gt;<br>
+Â  &lt;character mask="00000000 00000000 11111111"/&gt;<br>
 &lt;/bitmask&gt;</div>
 </div>
 
@@ -2737,10 +2737,10 @@ ex: slapfigh.xml<br>
 &lt;bitmask id="score" <span
 class="parameter_example_focus">byte-completion="no"</span>&gt; &lt;!-- low
 nibble 3rd byte + 2nd byte + 1st byte + high nibble 3rd byte //--&gt;<br>
-  &lt;character mask="00000000 00000000 00001111"/&gt;<br>
-  &lt;character mask="00000000 11111111 00000000"/&gt;<br>
-  &lt;character mask="11111111 00000000 00000000"/&gt;<br>
-  &lt;character mask="00000000 00000000 11110000"/&gt;<br>
+Â  &lt;character mask="00000000 00000000 00001111"/&gt;<br>
+Â  &lt;character mask="00000000 11111111 00000000"/&gt;<br>
+Â  &lt;character mask="11111111 00000000 00000000"/&gt;<br>
+Â  &lt;character mask="00000000 00000000 11110000"/&gt;<br>
 &lt;/bitmask&gt;</div>
 </div>
 
@@ -2782,37 +2782,37 @@ autocompletion of the final result.</div>
 <div class="parameter_example">
 ex: rtype.xml<br>
 &lt;bitmask id="score"&gt; &lt;!-- bytes re-ordering: 1 - 0 - 2 //--&gt;<br>
-  &lt;character <span class="parameter_example_focus">mask="00000000 11111111
+Â  &lt;character <span class="parameter_example_focus">mask="00000000 11111111
 00000000"</span>/&gt;<br>
-  &lt;character <span class="parameter_example_focus">mask="11111111 00000000
+Â  &lt;character <span class="parameter_example_focus">mask="11111111 00000000
 00000000"</span>/&gt;<br>
-  &lt;character <span class="parameter_example_focus">mask="00000000 00000000
+Â  &lt;character <span class="parameter_example_focus">mask="00000000 00000000
 11111111"</span>/&gt;<br>
 &lt;/bitmask&gt;<br>
 <br>
 ex: solarq.xml<br>
 &lt;bitmask id="name"&gt;<br>
-  &lt;character <span class="parameter_example_focus">mask="00000000 00111111
+Â  &lt;character <span class="parameter_example_focus">mask="00000000 00111111
 00000000 00000000"</span>/&gt;<br>
-  &lt;character <span class="parameter_example_focus">mask="00111111 11000000
+Â  &lt;character <span class="parameter_example_focus">mask="00111111 11000000
 00000000 00000000"</span>/&gt;<br>
-  &lt;character <span class="parameter_example_focus">mask="00000000 00000000
+Â  &lt;character <span class="parameter_example_focus">mask="00000000 00000000
 00000000 00111111"</span>/&gt;<br>
 &lt;/bitmask&gt;<br>
 <br>
 example: byte-completion = 'yes'<br>
-    input 00000000 11111111 10101010<br>
-    input + mask 1 "00001111 1111" =&gt; 00001111 (already 8 bits, so no need
+Â Â Â  input 00000000 11111111 10101010<br>
+Â Â Â  input + mask 1 "00001111 1111" =&gt; 00001111 (already 8 bits, so no need
 for completion)<br>
-    input + mask 2 "00000000 00000000 1111" =&gt; 1010 + completion =&gt;
+Â Â Â  input + mask 2 "00000000 00000000 1111" =&gt; 1010 + completion =&gt;
 00001010<br>
-    output "0000111100001010" already on 2 bytes<br>
+Â Â Â  output "0000111100001010" already on 2 bytes<br>
 <br>
 example: byte-completion = 'no'<br>
-    input 00000000 11111111 10101010<br>
-    input + mask 1 "00001111 1111" =&gt; 00001111<br>
-    input + mask 2 "00000000 00000000 1111" =&gt; 1010 (no completion)<br>
-    output "000011111010" meaning "00000000 11111010" on 2 bytes  </div>
+Â Â Â  input 00000000 11111111 10101010<br>
+Â Â Â  input + mask 1 "00001111 1111" =&gt; 00001111<br>
+Â Â Â  input + mask 2 "00000000 00000000 1111" =&gt; 1010 (no completion)<br>
+Â Â Â  output "000011111010" meaning "00000000 11111010" on 2 bytesÂ  </div>
 </div>
 <br>
 <br>
@@ -2837,7 +2837,7 @@ href="http://en.wikibooks.org/wiki/Unicode">http://en.wikibooks.org/wiki/Unicode
 href="http://en.wikibooks.org/wiki/Unicode/Character_reference">http://en.wikibooks.org/wiki/Unicode/Character_reference</a><br>
 <a
 href="http://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols">http://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols</a><br>
-<a href="http://unicode-table.com/">http://unicode-table.com</a><br>
+<a href="https://symbl.cc/">https://symbl.cc</a><br>
 <a id="ref_005" name="ref_005"></a>5. "<span>Binary-to-text encoding",
 Wikipedia<br>
 </span><a
